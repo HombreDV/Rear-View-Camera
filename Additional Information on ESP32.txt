@@ -15,8 +15,27 @@ two push buttons - right push button is the upload buttton , en is a reset butto
 
 it will connect until you press the button down
 
-Video Stopped on minute 19:08 ---->  ESP 32 WIFI 
+WIFI
+
+protocols 802.11 b/g/n
+operates at 2.4 ghz
+data rate up to 150 mbps
+adjustable transmit power 20.5 dbm
+supports antenna diversity 
+
+in station mode it is connected to router
+in soft access point it is the access point of all devices
+
+In STA mode esp32 gets IP address from router DHCP
+In sap mode the ip address comes from clients
+
+USING the ESP32 as a wifi access point
+
+
+BLUETOOTH
+Video Stopped on minute 30:05 ---->  ESP32 BLUETOOTH
+ 
 
 
 
-
+https://www.youtube.com/watch?v=xPlN_Tk3VLQ&t=1148s
