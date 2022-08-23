@@ -1,0 +1,22 @@
+Introduction to ESP32 - Video
+ESP32 CAM - integrated camera
+
+need to install arduino IDE Boards Manager for esp32
+
+copy Json file
+
+file - preferences - Pace in additional boards managers Urls - hit okay
+
+tools - board manager - esp32 - esp32 by espressif Systems
+
+Uploading a sketch
+
+two push buttons - right push button is the upload buttton , en is a reset button
+
+it will connect until you press the button down
+
+Video Stopped on minute 19:08 ---->  ESP 32 WIFI 
+
+
+
+
