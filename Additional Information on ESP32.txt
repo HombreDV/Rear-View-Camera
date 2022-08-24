@@ -33,9 +33,17 @@ USING the ESP32 as a wifi access point
 
 
 BLUETOOTH
-Video Stopped on minute 30:05 ---->  ESP32 BLUETOOTH
- 
+capable of bluetooth low energy
+can act as a bluetooth client or server
+classic bluetooth for continuous data streaming
+wireless headsets, file transer, keyboards or speakers
+BLE for fitness bands medical monitors etc
 
+serial terminal for bluetooth on esp32
 
+Finished Video
 
-https://www.youtube.com/watch?v=xPlN_Tk3VLQ&t=1148s
+Summary/Hottakes
+- easy to use Bluetooth, has touch sensitive application
+
+Continuing onto ESP32 CAM - 10 Dollar Camera for IoT Projects
