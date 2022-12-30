@@ -1,0 +1,36 @@
+Ultrasonic Distance Sensor:
+
+Ultrasonic Distance Sensor - HC-SR04
+
+[Distance Range]
+* ranging accuracy can reach and control circuit
+2 cm to 400 cm
+
+0.7874 in to 157.48in ~ 13 ft 
+
+VCC (POwer)
+Trig (trigger)
+Echo (Receive)
+GND (ground)
+
+Working Voltage	: 5 V
+Working Current	: 15 mA
+
+Measuring Angle 	: 15 degree
+
+Trigger Input signal	:10uSTTL pulse (Transistor-transistor logic)
+Echo output Signal	: Input TTL lever signal and the range in proportion
+Dimension: 45*20*15 mm
+
+Timing Diagram:
+
+Need to supply a short 10uS pulse to the trigger input to start the ranging , and the module will send out an 8 cycle burst of ultrsound at 40kHz
+
+you can calculate the ranfe through the time interval between sending trigger signal and receiving echo signal
+
+
+
+https://learn.sparkfun.com/tutorials/sparkfun-inventors-kit-experiment-guide---v40/circuit-3b-distance-sensor
+
+
+https://github.com/sparkfun/HC-SR04_UltrasonicSensor/commit/53ae221e3b46cdba0c72f0801f25e3b726319faa
