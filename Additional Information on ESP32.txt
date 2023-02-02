@@ -47,3 +47,35 @@ Summary/Hottakes
 - easy to use Bluetooth, has touch sensitive application
 
 Continuing onto ESP32 CAM - 10 Dollar Camera for IoT Projects
+
+
+
+
+
+
+
+ESP32 code structure:
+
+- same structure as arduino code. includes main parts: setup code and loop code
+- setup code is code in setup() function
+		- setup code is executed right after power up or reset.
+		- only executed once
+		- setup code is used to initialize variables, pin modes, start using libraries
+Loop code is code in loop() function
+		- executed right after setup code
+		- loop code is executed repeatedly (infinitely)
+		- loop code is used to do the main task application
+
+= Setup() and loop() functions must be used in ESP32 code. if not, it generates an error.
+= libraries usually end with a .h
+
+- use #define to give a constant definition -> #define MAx_COunt 180
+Global variables are outside your setup and loop functions.
+
+
+
+
+
+From a HLD:
+
+I must measure a signal with the sound booster and pass that to the esp32 that will then transmit to the receiving ESP32 that will translate signal into something noticable.
