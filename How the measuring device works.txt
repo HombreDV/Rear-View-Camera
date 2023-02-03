@@ -1,0 +1,81 @@
+How does the DIstance measurer work
+2 cm to 400 cm
+2 cm - 13.1234 feet
+
+using io trigger for at least 10 us high level signal
+the module automatically sends eight 40 Khz and detect whether therhere is a pulse signal back. 
+test distance = high level time x velocity of sound (340M/S)/2
+5v supply 
+trigger pulse input
+echo pulse output
+0v ground
+
+working voltage DC 5 volts
+working current 15 mA
+working frequncy 40 Hz <- maybe kilohertz
+measuring angle is 15 degrees
+trigger input signal 10 uS TTL pulse 
+Echo Output Signal input TTL lever signal and the range in proportion
+dimension 45*20*15 mm
+
+Supply a short 10uS pulse to the trigger input to start the ranging
+
+	- so a high value for 10uS will the sign to start the 		process of shooting beams
+Transmitter will send out an 8 cycle burst of ultrasound at 40KHz
+
+The receiver will turn on once the transmitter finishes it's pulses. 
+
+the receiver is a distance object that is pulse width and the range in proportion.
+
+you calculate the range through the time interval between sending trigger signal and receiving echo signal.
+
+Formula = uS/58 for measurments in cenitmeters
+Formula = uS/148 for measurements in inches
+the range = high level time * velocity (340M/S)/2
+
+suggest using over 60ms measurement cycle in order to prevent trigger signal to the echo signal
+
+I believe range is referring to how long each module should be turned on. the time between bursts and receptions
+
+so trigger goes high and when we get a reception the echo then goes high?
+
+you write to the pin for the time that is needed for each pulse.
+the first pulse would be setting the trigger pin high for 10 micro seconds
+
+commands such as delayMicroseconds(10)
+
+digitalWrite(trigpin, LOW);
+
+once the trigger pin goes low, the echo pin will signal how long it takes before it goes high, which would indicate a return signal
+
+the formula therefore is the time/148 for inches
+
+This is how it will look!!
+
+if we complete a trip at the speed of sound in ten seconds, we have covered 343m/s therefore, we have covered 3430 m. since it is round trip we only care about /half of it. we moved around 1715 m
+I think the signal for echo starts 
+
+if we are dealing with milliseconds our distance covered in 10 ms is 
+
+		343m/s=0.343m/mS
+
+if we convert between mS to uS
+
+		343m/s = .000343m/uS
+
+if we convert from meters to centimeters
+
+		.000343m/uS = 0.0343cm/uS
+
+measuring frequency with pulsein (my idea for how this pulse thing works, the duration time is starting as soon as I call the time and the fact that its the same speed, should mean that the pulsein is taking into account this by simply correcting the error)
+- Another phenomenon related to the perception of time delays between two events is an echo. A person can often perceive a time delay between the production of a sound and the arrival of a reflection of that sound off a distant barrier. If you have ever made a holler within a canyon, perhaps you have heard an echo of your holler off a distant canyon wall. The time delay between the holler and the echo corresponds to the time for the holler to travel the round-trip distance to the canyon wall and back. A measurement of this time would allow a person to estimate the one-way distance to the canyon wall. For instance if an echo is heard 1.40 seconds after making the holler, then the distance to the canyon wall can be found as follows:
+
+distance = v • t = 345 m/s • 0.70 s = 242 m
+The canyon wall is 242 meters away. You might have noticed that the time of 0.70 seconds is used in the equation. Since the time delay corresponds to the time for the holler to travel the round-trip distance to the canyon wall and back, the one-way distance to the canyon wall corresponds to one-half the time delay.
+
+
+
+"Reads a pulse (either HIGH or LOW) on a pin. For example, if value is HIGH, pulseIn() waits for the pin to go HIGH, starts timing, then waits for the pin to go LOW and stops timing. Returns the length of the pulse in microseconds or 0 if no complete pulse was received within the timeout."
+
+https://learn.sparkfun.com/tutorials/sparkfun-inventors-kit-experiment-guide---v40/circuit-3b-distance-sensor
+
