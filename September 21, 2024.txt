@@ -1,0 +1,5 @@
+lm340 voltage regulator specs
+https://www.ti.com/lit/ds/symlink/lm340.pdf?ts=1726903293156
+
+Unable to find dimension of pins for esp32, will buy calipers
+
